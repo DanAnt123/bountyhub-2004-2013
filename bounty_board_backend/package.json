@@ -9,6 +9,11 @@
         "test": "jest",
         "lint": "eslint ."
     },
+    "jest": {
+        "testMatch": [
+            "**/tests/**/*.js"
+        ]
+    },
     "dependencies": {
         "cors": "2.8.5",
         "dotenv": "^16.3.1",
