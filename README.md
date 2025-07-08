@@ -1,1 +1,3 @@
-# bountyhub-2004-2013
+# Project Repository
+
+This is the initial README file for the project.
