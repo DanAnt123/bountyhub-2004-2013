@@ -62,7 +62,7 @@ function updateBounty(id, { title, description, github_repo_link, amount, status
       const newStatus = status !== undefined ? status : row.status;
 
       db.run(
-        `UPDATE bounties SET title = ?, description = ?, github_repo_link = ?, amount = ?, status = ? WHERE id = ?`,
+        'UPDATE bounties SET title = ?, description = ?, github_repo_link = ?, amount = ?, status = ? WHERE id = ?',
         [newTitle, newDescription, newGithubRepo, newAmount, newStatus, id],
         function (err2) {
           if (err2) return reject(err2);

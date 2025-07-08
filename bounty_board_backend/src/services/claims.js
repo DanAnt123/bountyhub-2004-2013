@@ -45,7 +45,7 @@ function completeClaim(claim_id, user_id) {
       if (claim.status === 'completed') return reject(new Error('Already completed.'));
 
       db.run(
-        "UPDATE claims SET status = 'completed', completed_at = CURRENT_TIMESTAMP WHERE id = ?",
+        'UPDATE claims SET status = \'completed\', completed_at = CURRENT_TIMESTAMP WHERE id = ?',
         [claim_id],
         function (err2) {
           if (err2) return reject(err2);
