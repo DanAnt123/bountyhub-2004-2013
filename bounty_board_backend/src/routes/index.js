@@ -1,6 +1,8 @@
 const express = require('express');
 const healthController = require('../controllers/health');
 const authRoutes = require('./auth');
+const bountiesRoutes = require('./bounties');
+const claimsRoutes = require('./claims');
 
 const router = express.Router();
 // Health endpoint
@@ -35,5 +37,11 @@ router.get('/', healthController.check.bind(healthController));
 
 // Auth endpoints
 router.use('/auth', authRoutes);
+
+// Bounty endpoints
+router.use('/bounties', bountiesRoutes);
+
+// Claims endpoints
+router.use('/claims', claimsRoutes);
 
 module.exports = router;

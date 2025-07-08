@@ -10,7 +10,6 @@ function getDbConnection() {
   if (!db) {
     db = new sqlite3.Database(DB_FILE, (err) => {
       if (err) {
-        // eslint-disable-next-line no-console
         console.error('Failed to connect to SQLite database:', err.message);
         throw err;
       }
