@@ -70,7 +70,12 @@ Supabase API access for schema modification is currently failing for this partic
 
 ## Troubleshooting
 
-- If you encounter "missing function public.run_sql" errors, use the [Supabase SQL Editor](https://app.supabase.com/project/daxokjfnhmiaanrjdlor/sql) to manually create or update tables. Contact Supabase support if the project cannot execute schema changes via API.
+### Known Limitation for This Project
+
+- The Supabase API and automation tools cannot list or modify tables directly for this project because the required Postgres function `public.run_sql` is not available (attempting table listing results in "missing function public.run_sql" errors).  
+- **To view, create, or modify tables:**  
+  Use the [Supabase Dashboard SQL Editor](https://app.supabase.com/project/daxokjfnhmiaanrjdlor/sql) and manage all schema changes manually.
+- Contact Supabase support if this limitation needs to be lifted or for further troubleshooting.
 
 ---
 
